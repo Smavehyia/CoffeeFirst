@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.smavehyiashahid.birthday.MainActivity"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nameHint"
+        android:padding="16dp"
+        android:id="@+id/name"/>
+    <TextView
+        style="@style/HeaderTextStyle"
+        android:text="@string/toppings"
+        android:fontFamily="sans-serif-light"
+        android:padding="16dp"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:text= "@string/whippedCream"
+        android:textSize="16sp"
+        android:onClick="orderTopping"
+        android:id="@+id/order_topping"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:text= "@string/chocolate"
+        android:textSize="16sp"
+
+        android:id="@+id/order_topping_choc"/>
+
+    <TextView
+        style="@style/HeaderTextStyle"
+        android:text="@string/quantity"
+        android:id="@+id/text1"
+        android:textColor="@android:color/darker_gray"
+        android:padding="16dp"
+        android:fontFamily="sans-serif-light"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+   <Button
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:text="+"
+       android:padding="16dp"
+       android:onClick="increment"
+       />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="1"
+        android:id="@+id/quantity_text_view"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-light"
+        android:padding="16dp"
+        />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:padding="16dp"
+        android:onClick="decrement"
+        />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        android:textAllCaps="true"
+        android:paddingLeft="20dp"
+        android:onClick="submitOrder"
+
+        />
+</LinearLayout>
+    </ScrollView>
